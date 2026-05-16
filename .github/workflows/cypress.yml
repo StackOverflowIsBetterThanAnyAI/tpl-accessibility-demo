@@ -1,0 +1,31 @@
+name: Run Cypress Tests
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    full-accessibility-audit-custom:
+        name: Full Accessibility Audit Custom
+        uses: StackOverflowIsBetterThanAnyAI/full-accessibility-audit/.github/workflows/full-accessibility-audit.yml@master
+        with:
+            node_version: "16"
+            app_port: "3000"
+            start_command: "PORT=3000 HOST=0.0.0.0 npm run dev"
+
+    full-accessibility-audit-axe:
+        name: Full Accessibility Audit Axe
+        uses: StackOverflowIsBetterThanAnyAI/full-accessibility-audit/.github/workflows/full-accessibility-audit.yml@axe
+        with:
+            node_version: "16"
+            app_port: "3000"
+            start_command: "PORT=3000 HOST=0.0.0.0 npm run dev"
+
+    full-accessibility-audit-alfa:
+        name: Full Accessibility Audit Alfa
+        uses: StackOverflowIsBetterThanAnyAI/full-accessibility-audit/.github/workflows/full-accessibility-audit.yml@alfa
+        with:
+            node_version: "16"
+            app_port: "3000"
+            start_command: "PORT=3000 HOST=0.0.0.0 npm run dev"
