@@ -17,3 +17,4 @@
 - 12x books insufficient contrast
 - 24x books anchor does not change on hover
 - 12x books alt attribute is missing
+- 12x books links have no name
