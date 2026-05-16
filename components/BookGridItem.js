@@ -6,12 +6,11 @@ export default function BookGridItem({
     title,
     author,
     image,
+    index,
     holds,
     copies,
     dateAdded,
 }) {
-    const id = _uniqueId('tpl-')
-
     return (
         <div
             className="
@@ -21,14 +20,16 @@ export default function BookGridItem({
       md:w-1/4
     "
         >
-            <a href="#" className="group" id={`${id}-heading`}>
-                <img src={image} alt="" className="mb-2 w-full" />
-                <h3 className="text-blue-600 group-hover:underline">{title}</h3>
-                <p className="text-sm">
-                    <span className="sr-only">, by: </span>
-                    {author}
-                </p>
+            <a href={`book-${index}`} className="group" id={`${index}-heading`}>
+                <img src={image} className="mb-2 w-full" />
             </a>
+            <a href={`book-${index}`} className="group" id={`${index}-heading`}>
+                <h3 className="text-blue-300 group-hover:underline">{title}</h3>
+            </a>
+            <p className="text-sm">
+                <span className="sr-only">, by: </span>
+                {author}
+            </p>
 
             <p className="text-sm">
                 {copies} copies / {holds} holds
@@ -40,13 +41,13 @@ export default function BookGridItem({
 
             <div className="flex flex-col space-y-2 w-full">
                 <a
-                    href="#"
+                    href={`place-hold-${index}`}
                     className="bg-blue-600 text-white rounded px-4 py-2 font-bold text-center"
                 >
                     Place Hold
                 </a>
                 <a
-                    href="#"
+                    href={`save-${index}`}
                     className="bg-white border-2 border-gray-200 text-gray-900 rounded px-4 py-2 text-center"
                 >
                     Save

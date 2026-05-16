@@ -1,30 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Getting Started
 
-## Getting Started
+## a11y errors
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 1x document has no title
+- 1x document has no lang attribute
+- 1x footer table has wrong child element
+- 1x footer element has insufficient contrast
+- 1x bad heading order
+- 1x heading bad aria attribute
+- 1x heading bad aria value
+- 2x pagination buttons do not change on hover
+- 6x pagination buttons cannot be reached by keyboard
+- 6x pagination table has wrong child elements
+- 1x heading aria-labelledby id does not exist
+- 12x books combine image and name links which point to the same resource
+- 12x books insufficient contrast
+- 24x books anchor does not change on hover
+- 12x books alt attribute is missing

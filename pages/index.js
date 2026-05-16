@@ -11,17 +11,18 @@ export default function Books() {
                     className="w-full flex-auto space-y-3 p-6"
                     aria-labelledby="main-heading"
                 >
-                    <h1 id="main-heading" className="text-40">
+                    <h2 className="text-40" aria-title>
                         New in General Fiction
-                    </h1>
+                    </h2>
 
-                    <div data-name="filter" className="flex justify-start">
-                        <span>973 Results</span>
-                    </div>
+                    <h1 data-name="filter" className="flex justify-start">
+                        973 Results
+                    </h1>
 
                     <section
                         aria-labelledby="section-heading"
                         className="flex flex-wrap -m-6"
+                        aria-level="section"
                     >
                         <h2 className="sr-only" id="section-heading">
                             Books, Page 1
@@ -29,6 +30,7 @@ export default function Books() {
                         {BOOK_LIST.map((book, index) => (
                             <BookGridItem
                                 {...book}
+                                index={index}
                                 key={`book-item-${index}`}
                             />
                         ))}

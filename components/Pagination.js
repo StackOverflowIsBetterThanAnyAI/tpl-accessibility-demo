@@ -12,16 +12,14 @@ function PageLink({ number, current }) {
     })
 
     return (
-        <li>
-            <a
-                href={`#?page=${number}`}
-                className={classnames}
-                aria-label={label}
-                aria-current={isCurrentPage}
-            >
-                {number}
-            </a>
-        </li>
+        <div
+            onClick={() => (window.location.hash = `#?page=${number}`)}
+            className={classnames}
+            aria-label={label}
+            aria-current={isCurrentPage}
+        >
+            {number}
+        </div>
     )
 }
 
@@ -40,7 +38,7 @@ export default function Pagination({
             <ul className="inline-flex space-x-2 mx-auto">
                 <li className="mx-4">
                     <a
-                        href="#"
+                        href="0"
                         className="font-bold text-22"
                         aria-label="Previous page"
                     >
