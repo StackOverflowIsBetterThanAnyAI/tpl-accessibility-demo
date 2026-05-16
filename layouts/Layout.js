@@ -1,11 +1,10 @@
-export default function Layout({ children }){
-  return (
-
-    <>
-    { children }
-    <footer>
-      <ul></ul>
-    </footer>
-    </>
-  )
+export default function Layout({ children }) {
+    return (
+        <>
+            {children}
+            <footer>
+                <ul></ul>
+            </footer>
+        </>
+    )
 }
