@@ -6,6 +6,7 @@
 - 1x document has no lang attribute
 - 1x footer table has wrong child element
 - 1x footer element has insufficient contrast
+- 7x footer aria-label is not allowed
 - 1x bad heading order
 - 1x heading bad aria attribute
 - 1x heading bad aria value
